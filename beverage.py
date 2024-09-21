@@ -1,6 +1,6 @@
-# Author:
-# Class:
-# Date:
+# Author: Robert Depweg
+# Class: CIS226
+# Date: 9/18/24
 class Beverage:
     """ Instance of single beverage """
 

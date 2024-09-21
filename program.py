@@ -1,33 +1,34 @@
-# Author:
-# Class:
-# Date:
+# Author: Robert Depweg
+# Class: CIS226
+# Date: 9/18/24
 """Program code"""
-# make instance of beveragecollection over to utils in place of raw list
-
-from user_interface import UserInterface
-
-user_choice = ''
-
-while user_choice != '5':
-    user_choice = UserInterface.print_header()
-    # Load File
-    if user_choice == "1":
-        beverage            
-    # Print List
-    elif user_choice = "2":
-        
-    # Search List
-    elif user_choice == "3":
-
-    # Add new beverage
-    elif user_choice == "4":
-
-    # Exit
-    elif user_choice == "5":
-        exit.os
-
-    else:
 
 def main(*args):
     """Method to run program"""
-    print("Hello World!")
+    
+    # First party imports
+    import os
+
+    # Third party imports
+    from user_interface import UserInterface
+    from beverage import BeverageCollection
+
+    BEVERAGE_LIST_MAX = 5
+
+    user_choice = ''
+    path_to_csv_file = "../cis226-inclass-1-robertdepweg/employees.csv"
+
+    ui = UserInterface()
+    bev = BeverageCollection()
+
+    user_choice = ui.print_list()
+
+    try:
+        ui.check_user_validity(user_choice)
+    except ValueError:
+
+
+    # Exit
+    os._exit
+
+

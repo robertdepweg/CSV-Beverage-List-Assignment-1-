@@ -1,22 +1,24 @@
-# Author:
-# Class:
-# Date:
-#mostly csv processer
+# Author: Robert Depweg
+# Class: CIS226
+# Date: 9/18/24
+"""Obtains data from csv file"""
+
 class CSVProcesser:
-    """  """
+    """"""
     from beverage import BeverageCollection
 
-    def file_loader():
-        """  """
+    def csv_importer(self, ui, loaded_value=False):
+        """"""
         
         try:
             infile = open('beverage_list.csv', 'r')
-            infile.readline()
+            line = infile.readline().replace("\n", "")
 
             for line in infile:
-                line_values = ()
-                line_values.append = line.split(',')
-
+                line = line.split(',')
+                bev.beverage_list.append(line)
+            loaded_value = True
+            return loaded_value
 
         except IOError:
             print('IOError: No file with that name.')
@@ -24,3 +26,4 @@ class CSVProcesser:
             print(message)
 
         pass
+
