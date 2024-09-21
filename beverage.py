@@ -1,46 +1,43 @@
 # Author: Robert Depweg
 # Class: CIS226
 # Date: 9/18/24
+"""Beverage module"""
+
 class Beverage:
-    """ Instance of single beverage """
-
-
-    ###################
-    #  Constructors   #
-    ###################
+    """Instance of single beverage"""
 
     def __init__(self, id, name, pack, price, active=False):
-        """  """
+        """Constructor"""
         self.id = id
         self.name = name
         self.pack = pack
         self.price = price
         self.active = active
 
-    ###################
-    #  Methods        #
-    ###################
-
     def __str__(self):
-        pass
+        """Returns string of beverage"""
+        return f"ID: {self.id}, Name: {self.name}, Pack: {self.pack}, Price: ${self.price}, Active Status: {self.active}"
 
 class BeverageCollection:
-    """ Instance of a collection of beverages """
+    """Instance of a collection of beverages"""
 
-    beverage_list = []
+    __beverage = []
 
-    ###################
-    #  Methods        #
-    ###################
+    def add(self, addition):
+        """Adds beverage to list"""
+        # Used for both initially adding in through csv and by user
+        self.__beverage.append(addition)
 
-    def add():
-        """ Adds beverage to list """
-        pass
+    def search(self, search_term):
+        """Searches beverage list for user's input"""
+        counter = 0
+        for items in self.__beverage:
+            if search_term in self.__beverage:    
+                return f"{items[counter]}"
+            else:
+                counter += 1
 
-    def search():
-        """ Searches beverage list for user's input """
-        pass
-
-    def __str__():
-        """  """
-        pass
+    def __str__(self):
+        """Returns string of beverage collection"""
+        for items in self.__beverage:
+            return f"{items}"

@@ -149,4 +149,6 @@ Try to send any dependencies (instances of classes needed inside other classes) 
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
+The search function doesn't work, but it still does take in input.
+The print list function doesn't go through the whole list, only one item.
 
